@@ -5,7 +5,7 @@ import './css/styles.css';
 import ExchangeService from './currency-exchange-service.js';
 
 function clearFields() {
-  $('#moneyamount').val();
+  $('#moneyamount').val("");
   $('.showErrors').text("");
   $('.showNor').text("");
   $('.showYen').text("");
@@ -26,13 +26,13 @@ function exchangeCurrency(response) {
   }
 }
 
+let USD = $('#moneyamount').val(USD);
 $(document).ready(function() {
   $('#exchangebutton').click(function() {
-    let USD = $('#moneyamount').val(USD);
     clearFields();
     ExchangeService.convertCurrency(USD)
-        .then(function(response) {
-          exchangeCurrency(response);
+    .then(function(response) {
+      exchangeCurrency(response);
         });
   });
 });
