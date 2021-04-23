@@ -16,11 +16,11 @@ function clearFields() {
 
 function exchangeCurrency(response) {
   if (response.conversion_rates) {
-  $('.showNor').html(`Your amount in Norwegian Krones is ${response.conversion_rates.NOK}`);
-  $('.showYen').html(`Your amount in Japanese Yen is ${response.conversion_rates.JPY}`);
-  $('.showNewZ').html(`Your amount in New Zealand Dollars is ${response.conversion_rates.NZD}`);
-  $('.showAus').html(`Your amount in Australian Dollars is ${USD} * ${response.conversion_rates.AUD}`);
-  $('.showColom').html(`Your amount in Colombian Pesos is ${response.conversion_rates.COP}`);
+    $('.showNor').html(`Your amount in Norwegian Krones is ${response.conversion_rates.NOK}`);
+    $('.showYen').html(`Your amount in Japanese Yen is ${response.conversion_rates.JPY}`);
+    $('.showNewZ').html(`Your amount in New Zealand Dollars is ${response.conversion_rates.NZD}`);
+    $('.showAus').html(`Your amount in Australian Dollars is ${response.conversion_rates.AUD}`);
+    $('.showColom').html(`Your amount in Colombian Pesos is ${response.conversion_rates.COP}`);
   } else {
     $('.showErrors').html(`Sorry! Either you entered an invalid API key, have an innactive account, have reached your quota, are using unsuported code, or requested a malformed request`);
   }
@@ -31,8 +31,8 @@ $(document).ready(function() {
   $('#exchangebutton').click(function() {
     clearFields();
     ExchangeService.convertCurrency(USD)
-    .then(function(response) {
-      exchangeCurrency(response);
-        });
+      .then(function(response) {
+        exchangeCurrency(response);
+      });
   });
 });
