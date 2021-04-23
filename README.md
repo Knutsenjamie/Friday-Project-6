@@ -1,7 +1,7 @@
-# _Name Of Project_
+# _Currency Exchanger_
 
 
-### _Type Of Project_
+### _Integrating API's_
 
 ##### By:
 #####  _**Jamie Knutsen**_ _©2021_
@@ -18,7 +18,7 @@
 * _Webpack_
 * _Babel_
 * _ES Lint_
-* _Name Of API_
+* _ExchangeRate API_
 
 
 ## Description: 
@@ -32,7 +32,7 @@ https://github.com/Knutsenjamie/Friday-Project-6.git
 ### Prerequisites
 * [Node] (https://nodejs.org/en/)
 * A text editor such as [VS Code] (https://code.visualstudio.com/)
-* A generated API Key from ________.com 
+* A generated API Key from https://www.exchangerate-api.com
 
 ### Installation
 1. Open terminal
@@ -42,8 +42,8 @@ https://github.com/Knutsenjamie/Friday-Project-6.git
 5. Run the command 'code .' in your computer's terminal
 6. Open VS Code or other preffered text editor terminal within the project file
 7. Enter Command 'touch . env'
-8. Visit _________.com to generate your unique API key
-9. In the .env file, type API_KEY=[your unique API key here]
+8. Visit https://www.exchangerate-api.com to sign up for free and generate your unique API key
+9. In the .env file, type API_KEY=[your unique API key here] in order to gain access to the API. 
 10. To start a development server and view the project in the browser:
   * Run the command 'npm install' to install dependencies
   * Optionally, run the command 'npm run build' to make a bundle of the files
