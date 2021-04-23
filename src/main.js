@@ -6,12 +6,12 @@ import ExchangeService from './currency-exchange-service.js';
 
 function clearFields() {
   $('#moneyamount').val();
-  $('.showErrors').text("");
-  $('.showNor').text("");
-  $('.showYen').text("");
-  $('.showNewZ').text("");
-  $('.showAus').text("");
-  $('.showColom').text("");
+  $('.showErrors').val();
+  $('.showNor').val();
+  $('.showYen').val();
+  $('.showNewZ').val();
+  $('.showAus').val();
+  $('.showColom').val();
 }
 
 function exchangeCurrency(response) {
@@ -19,7 +19,7 @@ function exchangeCurrency(response) {
   $('.showNor').html(`Your amount in Norwegian Krones is ${response.conversion_rates.NOK}`);
   $('.showYen').html(`Your amount in Japanese Yen is ${response.conversion_rates.JPY}`);
   $('.showNewZ').html(`Your amount in New Zealand Dollars is ${response.conversion_rates.NZD}`);
-  $('.showAus').html(`Your amount in Australian Dollars is ${response.conversion_rates.AUD}`);
+  $('.showAus').html(`Your amount in Australian Dollars is ${USD} * ${response.conversion_rates.AUD}`);
   $('.showColom').html(`Your amount in Colombian Pesos is ${response.conversion_rates.COP}`);
   } else {
     $('.showErrors').html(`Sorry! Either you entered an invalid API key, have an innactive account, have reached your quota, are using unsuported code, or requested a malformed request`);
