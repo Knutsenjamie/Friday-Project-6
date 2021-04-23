@@ -26,8 +26,8 @@ function exchangeCurrency(response) {
   }
 }
 
-let USD = $('#moneyamount').val(USD);
 $(document).ready(function() {
+  let USD = $('#moneyamount').val();
   $('#exchangebutton').click(function() {
     clearFields();
     ExchangeService.convertCurrency(USD)
