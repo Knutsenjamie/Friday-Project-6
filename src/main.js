@@ -5,7 +5,7 @@ import './css/styles.css';
 import ExchangeService from './currency-exchange-service.js';
 
 function clearFields() {
-  $('#moneyamount').val("");
+  $('#moneyamount').val();
   $('.showErrors').text("");
   $('.showNor').text("");
   $('.showYen').text("");
