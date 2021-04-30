@@ -8,16 +8,22 @@
 </head>
 <body>
   <div class="container-fluid">
-    <h1>Convert USD To These 5 Currencies</h1>
-    <label for="moneyamount">Enter an amount</label>
-    <input id="moneyamount" type=number>
-    <button class="btn-primary" id="exchangebutton">Exchange!</button>
-    <div class ="showErrors"></div>
-    <div class="showNor"></div>
-    <div class="showYen"></div>
-    <div class="showNewZ"></div>
-    <div class="showAus"></div>
-    <div class="showColom"></div>
+    <h1>Convert USD To One Of These 5 Currencies</h1>
+    <form id="currencyExchangerForm">
+      <div id="currencyChoices">
+        <label><input type="radio" id="NOK" value="NOK" name="currencyTypes">Norwegian Krone</label>
+        <label><input type="radio" id="JPY" value="JPY" name="currencyTypes">Japanese Yen</label>
+        <label><input type="radio" id="NZD" value="NZD" name="currencyTypes">New Zealand Dollar</label>
+        <label><input type="radio" id="AUD" value="AUD" name="currencyTypes">Australian Dollars</label>
+        <label><input type="radio" id="COP" value="COP" name="currencyTypes">Colombian Pesos</label>
+      </div>
+      <div id="userInputBox">
+        <input type="number" id="usDollars" placeholder="Enter number in USD">
+        <button type="submit" id="findRate" class="btn btn-success">Exchange!</button>
+      </div>
+    <h3>Your Exchange Rate Is:</h3>
+    <div id="exchangedRate"></div>
+    </form>
   </div>
 </body>
 </html>
