@@ -6,13 +6,13 @@ import ExchangeService from './currency-exchange-service.js';
 
 function exchangedRate(response, usDollars, otherCurrencies) {
   if (response.result != 'success') {
-    $('#exchangedRate').text(`There was an error: ${response.message}`);
+    $('#exchangedRate').text(`There was an error! ${response.message}`);
   } else if (!otherCurrencies) {
     $('#exchangedRate').text('Please select a currency');
   } else if (usDollars === '') {
     $('#exchangedRate').text('Please select/enter number in USD');
   } else if (response.result === 'success') {
-    $('#exchangedRate').text(`${usDollars} in ${otherCurrencies}: ${response.conversion_rates[otherCurrencies]*usDollars}`); 
+    $('#exchangedRate').text(`$${usDollars} in ${otherCurrencies} is roughly ${response.conversion_rates[otherCurrencies]*usDollars}`); 
   } else {
     $('#exchangedRate').text(`There was an error. Please try again.`);
   }

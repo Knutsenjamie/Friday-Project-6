@@ -4,11 +4,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
   <title>Currency Exchanger</title>
 </head>
 <body>
   <div class="container-fluid">
-    <h1>Convert USD To One Of These 5 Currencies</h1>
+    <div class="jumbotron">
+      <h1><strong>💵 Convert USD To One Of These 5 Currencies 💵</strong></h1>
+    </div>
     <form id="currencyExchangerForm">
       <div id="currencyChoices">
         <label><input type="radio" id="NOK" value="NOK" name="currencyTypes">Norwegian Krone</label>
@@ -17,10 +21,12 @@
         <label><input type="radio" id="AUD" value="AUD" name="currencyTypes">Australian Dollars</label>
         <label><input type="radio" id="COP" value="COP" name="currencyTypes">Colombian Pesos</label>
       </div>
+      <hr>
       <div id="userInputBox">
         <input type="number" id="usDollars" placeholder="Enter number in USD">
-        <button type="submit" id="showExchangeRate" class="btn btn-success">Exchange!</button>
+        <button type="submit" id="showExchangeRate" class="btn btn-dark">Exchange!</button>
       </div>
+    <hr>
     <h3>Your Exchange Rate Is:</h3>
     <div id="exchangedRate"></div>
     </form>
