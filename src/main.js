@@ -27,7 +27,7 @@ $(document).ready(function() {
     $('#usDollars').val("");
     let otherCurrencies = $('input:radio:checked').val();
     console.log(otherCurrencies);
-    ExchangeService.exchangedRate()
+    ExchangeService.convertCurrency()
       .then(function(response) {
         exchangedRate(response, usDollars, otherCurrencies);
       });
